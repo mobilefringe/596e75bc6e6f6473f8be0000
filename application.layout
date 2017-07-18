@@ -423,7 +423,7 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="lab-modal-body modal-sm">
-            <iframe src='http://localhost:2100/apichat.html' height="300px" style="border-radius: 10px;"></iframe>
+            <iframe src='/chat' height="300px" style="border-radius: 10px;"></iframe>
         </div>
     </div>
 </div>
