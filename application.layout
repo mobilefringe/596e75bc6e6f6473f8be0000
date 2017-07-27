@@ -417,11 +417,11 @@
 <div id="page_content">{{yield}}</div>
 
 <div class="container">
-     Trigger the modal with a button 
+     <!--Trigger the modal with a button -->
     <div id="chaticon">
         <input id="chatbot" type="image" src="//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/png/1501168741000/chat-2-icon.png" width="50px" height="50px" data-toggle="modal" data-target="#chat_modal"/>
     </div>
-     Modal 
+     <!--Modal -->
     <div class="modal" id="chat_modal" tabindex="-1" role="dialog" aria-labelledby="chat_modalLabel">
         <div class="lab-modal-body modal-sm">
             <iframe id="chat_frame" src='http://localhost:3000/apichat.html' height="300px" style="border-radius: 10px;"></iframe>
