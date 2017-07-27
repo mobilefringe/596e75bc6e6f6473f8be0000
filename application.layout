@@ -417,13 +417,13 @@
 
 <div class="container">
     <!-- Trigger the modal with a button -->
-    <div id="chaticon" style="border:0px; position:fixed; bottom:20px; right:30px;">
-        <input type="image" src="chat-2-icon.png" width="50px" height="50px" data-toggle="modal" data-placement="top" data-target="#myModal" style="outline:none;"/>
+    <div id="chaticon">
+        <input id="chatbot" type="image" src="chat-2-icon.png" width="50px" height="50px" data-toggle="modal" data-target="#chat_modal"/>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal" id="chat_modal" tabindex="-1" role="dialog" aria-labelledby="chat_modalLabel">
         <div class="lab-modal-body modal-sm">
-            <iframe src='/chat' height="300px" style="border-radius: 10px;"></iframe>
+            <iframe id="chat_frame" src='http://localhost:3000/apichat.html' height="300px" style="border-radius: 10px;"></iframe>
         </div>
     </div>
 </div>
