@@ -14,22 +14,6 @@
     outline: none;
 }
 
-#chat_modal.modal.in .lab-modal-body {
-    position:absolute;
-    bottom:120px;
-    right:10px;
-    margin:0px;
-}
-#chat_modal.modal .lab-modal-body {
-    -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-    -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-    -o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-    transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-}
-
-
-
-
 @keyframes bounce {
     from {
         transform: translateY(0px);
@@ -46,7 +30,20 @@
         transform: translateY(-15px);
     }
 }
-    
+
+#chat_modal.modal.in .lab-modal-body {
+    position:absolute;
+    bottom:120px;
+    right:10px;
+    margin:0px;
+}
+#chat_modal.modal .lab-modal-body {
+    -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+    transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+}
+
 .panel {
     overflow: hidden;
     position: absolute;
