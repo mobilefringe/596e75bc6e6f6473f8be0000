@@ -1,19 +1,4 @@
 @import url("animate.css");
-/*@import "@material/theme/dist/mdc.theme.css";*/
-
-
-.modal.in .lab-modal-body {
-    position:absolute;
-    bottom:120px;
-    right:10px;
-    margin:0px;
-}
-.lab-modal-body {
-    -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-    -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-    -o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-    transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-}
 
 #chaticon {
     border:0px; 
@@ -28,6 +13,22 @@
 #chatbot {
     outline: none;
 }
+
+#chat_modal.modal.in .lab-modal-body {
+    position:absolute;
+    bottom:120px;
+    right:10px;
+    margin:0px;
+}
+#chat_modal.modal .lab-modal-body {
+    -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+    transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+}
+
+
+
 
 @keyframes bounce {
     from {
