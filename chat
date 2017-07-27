@@ -1,16 +1,84 @@
-<div class="panel">
-    <!--div class="header md-toolbar-tools">API.AI Web Chat</div-->
-    <md-toolbar style="min-height:42px;z-index: 3; background: var(--mdc-theme-background);">
-        <div class="md-toolbar-tools" style="height:37px;">
-            <span md-truncate flex style="color: var(--mdc-theme-text-primary-on-background);">API.AI Webchat</span>
+<html>
+<head>
+    <title>API Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="chat.css" rel="stylesheet" />
+    <link href="animate.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+        var accessToken = '6815bff4f00341e0a5f0b6e2459340c7';  //Replace access token here
+        var baseUrl = "http://localhost:9000";
+        
+        $(document).ready(function() {
+            // Send "Hello" message upon opening Chatbot so the welcome message will be displayed.
+            axios.post('http://localhost:9000/chatbot_endpoint', {
+                message: "welcome",
+                property_id: 1 //Set the property ID
+            })
+            .then(function (response) {
+                setResponse(JSON.stringify(response, undefined, 2));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+            $("#input").keypress(function(event) {
+                if (event.which == 13) {
+                    event.preventDefault();
+                    send();
+                }
+            });
+        });
+
+        function send() {
+            var text = $("#input").val();
+            var d = document.getElementById('bot').innerHTML;
+            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><img src='Chrysanthemum.jpg' width='45px' height='45px' class='circular--square' style='float: right;' /><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>User</div></div>";
+            axios.post('http://localhost:9000/chatbot_endpoint', {
+                message: text,
+                property_id: 1 //Set the property ID
+            })
+            .then(function (response) {
+                setResponse(JSON.stringify(response, undefined, 2));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+            $('#input').val("");
+            
+              var d = document.getElementById('bot').lastElementChild.innerHTML;
+              document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 23), " animated flipInX", d.slice(23)].join('');
+            // setResponse("Loading...");
+        }
+
+        function setResponse(val) {
+            $("#response").text(val);
+            speech = $.parseJSON(val);
+            var d = document.getElementById('bot').innerHTML;
+            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutright'>" + speech.data + "</div><div class='message-from message-from-bot'>Weijin at "+ new Date().toLocaleString() +"</div></div>";
+    
+            var d = document.getElementById('bot').lastElementChild.innerHTML;
+            //  alert([d.slice(0, 24), " animated bounce", d.slice(24)].join(''));
+            document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 24), " animated flipInX", d.slice(24)].join('');
+            var objDiv = document.getElementById("bot");
+            objDiv.scrollTop = objDiv.scrollHeight;
+        }
+    </script>
+
+</head>
+<body >
+    <div class="panel">
+        <div class="header">
+            <div class="toolbar">
+                <span md-truncate flex>Mall Assistant</span>
+            </div>
+            <span flex></span>
         </div>
-
-
-        <span flex></span>
-    </md-toolbar>
-    <div id="bot" class="botclass"></div>
-    <div class='console'>
-        <input id="input" type="text" class="textin"> <!--button id="rec">Speak</button-->
-        <!--br>Response<br> <textarea id="response" cols="40" rows="20"></textarea-->
+        <div id="bot" class="botclass"></div>
+        <div class='console'>
+            <input id="input" type="text" class="textin" autofocus>
+        </div>
     </div>
-</div>
+</body>
+</html>
