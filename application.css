@@ -8499,6 +8499,10 @@ blockquote p {
 /* =Responsive: Portrait Phone
 -------------------------------------------------------------- */
 @media only screen and (max-width: 480px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
   .hidden_phone{
       display:none;
   }
