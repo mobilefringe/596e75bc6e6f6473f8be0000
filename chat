@@ -56,7 +56,7 @@
             $("#response").text(val);
             speech = $.parseJSON(val);
             var d = document.getElementById('bot').innerHTML;
-            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/png/1478016619000/Screen Shot 2016-11-01 at 12.10.11 PM.pnghttp://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/png/1478016619000/Screen Shot 2016-11-01 at 12.10.11 PM.png' width='45px' height='45px' class='circular--square' style='float: right;' /><div class='calloutright'>" + speech.data + "</div><div class='message-from message-from-bot'>Weijin at "+ new Date().toLocaleString() +"</div></div>";
+            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/png/1478016619000/Screen Shot 2016-11-01 at 12.10.11 PM.pnghttp://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/png/1478016619000/Screen Shot 2016-11-01 at 12.10.11 PM.png' width='45px' height='45px' class='circular--square' style='float: left;' /><div class='calloutright'>" + speech.data + "</div><div class='message-from message-from-bot'>Weijin at "+ new Date().toLocaleString() +"</div></div>";
     
             var d = document.getElementById('bot').lastElementChild.innerHTML;
             //  alert([d.slice(0, 24), " animated bounce", d.slice(24)].join(''));
