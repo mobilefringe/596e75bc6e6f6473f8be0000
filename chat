@@ -46,11 +46,11 @@
             .catch(function (error) {
                 console.log(error);
             });
+            
             $('#input').val("");
             
-              var d = document.getElementById('bot').lastElementChild.innerHTML;
-              document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 23), " animated flipInX", d.slice(23)].join('');
-            // setResponse("Loading...");
+            var d = document.getElementById('bot').lastElementChild.innerHTML;
+            document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 23), " animated flipInX", d.slice(23)].join('');
         }
 
         function setResponse(val) {
@@ -60,7 +60,6 @@
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutright'>" + speech.data + "</div><div class='message-from message-from-bot'>Weijan at "+ new Date().toLocaleString() +"</div></div>";
     
             var d = document.getElementById('bot').lastElementChild.innerHTML;
-            //  alert([d.slice(0, 24), " animated bounce", d.slice(24)].join(''));
             document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 24), " animated flipInX", d.slice(24)].join('');
             var objDiv = document.getElementById("bot");
             objDiv.scrollTop = objDiv.scrollHeight;
