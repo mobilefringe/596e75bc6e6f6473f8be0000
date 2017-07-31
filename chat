@@ -9,11 +9,11 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript">
         var accessToken = '6815bff4f00341e0a5f0b6e2459340c7';  //Replace access token here
-        var baseUrl = "http://localhost:9000";
+        var baseUrl = "http://mallmaverickdevelopment.com/";
         
         $(document).ready(function() {
             // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
-            axios.post('http://mallmaverickdevelopment.com/chatbot_endpoint', {
+            axios.post('http://mallmaverickdevelopment.com//chatbot_endpoint', {
                 message: "welcome",
                 property_id: 1 //Set the property ID
             })
@@ -36,7 +36,7 @@
             var text = $("#input").val();
             var d = document.getElementById('bot').innerHTML;
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>" + new Date().toLocaleString() + "</div></div>";
-            axios.post('http://mallmaverickdevelopment.com/chatbot_endpoint', {
+            axios.post('http://mallmaverickdevelopment.com//chatbot_endpoint', {
                 message: text,
                 property_id: 1 //Set the property ID
             })
