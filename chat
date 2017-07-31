@@ -61,7 +61,7 @@
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/jpeg/1501512600000/Chrysanthemum.jpg' width='45px' height='45px' class='circular--square' style='float: left;' /><div class='calloutright'>" + speech.data + "</div><div class='message-from message-from-bot'>Weijan at "+ new Date().toLocaleString() +"</div></div>";
     
             var d = document.getElementById('bot').lastElementChild.innerHTML;
-            document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 24), " animated flipInX", d.slice(24)].join('');
+            // document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 24), " animated flipInX", d.slice(24)].join('');
             var objDiv = document.getElementById("bot");
             objDiv.scrollTop = objDiv.scrollHeight;
         }
