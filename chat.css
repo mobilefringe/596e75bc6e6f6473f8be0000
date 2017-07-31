@@ -1,5 +1,9 @@
 @import url("animate.css");
 
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 #chaticon {
     border:0px; 
     position:fixed; 
