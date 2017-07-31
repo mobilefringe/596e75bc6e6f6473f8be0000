@@ -71,7 +71,7 @@
     <div class="panel">
         <div class="header">
             <div class="toolbar">
-                <span md-truncate flex>Mall Assistant</span>
+                <span md-truncate flex>Chat Service</span>
             </div>
             <span flex></span>
         </div>
