@@ -35,7 +35,7 @@
         function send() {
             var text = $("#input").val();
             var d = document.getElementById('bot').innerHTML;
-            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>User</div></div>";
+            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>Twin Pine's Chat User</div></div>";
             axios.post('http://localhost:9000/chatbot_endpoint', {
                 message: text,
                 property_id: 27 //Set the property ID
