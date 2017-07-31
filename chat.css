@@ -106,7 +106,7 @@ div.calloutbig {
     background-color: #FFF;
     box-shadow: 0 1px rgba(0, 0, 0, 0.2);
     box-sizing: content-box;
-    font-family: 'Segoe UI', sans-serif;
+    // font-family: 'Segoe UI', sans-serif;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.5px;
