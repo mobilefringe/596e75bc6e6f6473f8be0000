@@ -420,7 +420,7 @@
 <div class="container">
      <!--Trigger the modal with a button -->
     <div id="chaticon">
-        <input id="chatbot" type="image" src="//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/png/1501602564000/chat_icon.png" width="50px" height="50px" data-toggle="modal" data-target="#chat_modal"/>
+        <input id="chatbot" type="image" src="//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/png/1501602564000/chat_icon.png" data-toggle="modal" data-target="#chat_modal"/>
     </div>
      <!--Modal -->
     <div class="modal" id="chat_modal" tabindex="-1" role="dialog" aria-labelledby="chat_modalLabel">
