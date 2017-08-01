@@ -13,21 +13,23 @@
         var baseUrl = "//mallmaverickdevelopment.com/";
         
         $(document).ready(function() {
-            $( "#chat_modal" ).on('shown', function(){
+            
                 // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
                 axios.post('http://localhost:9000/chatbot_endpoint', {
                     message: "welcome",
                     property_id: 1 //Set the property ID
                 })
                 .then(function (response) {
-                    setTimeout(function() {
-                        setResponse(JSON.stringify(response, undefined, 2));
-                    }, 1500);
+                    $( "#chat_modal" ).on('shown', function(){
+                        setTimeout(function() {
+                            setResponse(JSON.stringify(response, undefined, 2));
+                        }, 1500);
+                    });
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
-            });
+            // });
             
             $("#input").keypress(function(event) {
                 if (event.which == 13) {
