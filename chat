@@ -27,14 +27,15 @@
                 .catch(function (error) {
                     console.log(error);
                 });
-    
-                $("#input").keypress(function(event) {
-                    if (event.which == 13) {
-                        event.preventDefault();
-                        send();
-                    }
-                });
             });
+            
+            $("#input").keypress(function(event) {
+                if (event.which == 13) {
+                    event.preventDefault();
+                    send();
+                }
+            });
+            
         });
 
         function send() {
