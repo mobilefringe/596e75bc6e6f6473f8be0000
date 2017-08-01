@@ -42,7 +42,11 @@
                 property_id: 1 //Set the property ID
             })
             .then(function (response) {
-                setResponse(JSON.stringify(response, undefined, 2));
+                setTimeout(function() {
+                    setResponse(JSON.stringify(response, undefined, 2));
+                }, 500);
+                
+                // setResponse(JSON.stringify(response, undefined, 2));
             })
             .catch(function (error) {
                 console.log(error);
