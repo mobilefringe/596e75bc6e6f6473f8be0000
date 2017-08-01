@@ -70,7 +70,7 @@
     
             
             var d = document.getElementById('bot').lastElementChild.innerHTML;
-            document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 24), " animated flipInX", d.slice(24)].join('');
+            // document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 24), " animated flipInX", d.slice(24)].join('');
             var objDiv = document.getElementById("bot");
             objDiv.scrollTop = objDiv.scrollHeight;
         }
