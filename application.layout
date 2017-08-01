@@ -557,7 +557,7 @@
             }
         );
         
-        / Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
+        // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
         axios.post('http://localhost:9000/chatbot_endpoint', {
             message: "welcome",
             property_id: 1 //Set the property ID
