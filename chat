@@ -56,6 +56,9 @@
             
             var d = document.getElementById('bot').lastElementChild.innerHTML;
             document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 23), " animated flipInX", d.slice(23)].join('');
+            
+            var objDiv = document.getElementById("bot");
+            objDiv.scrollTop = objDiv.scrollHeight;
         }
 
         function setResponse(val) {
