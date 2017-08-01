@@ -44,7 +44,7 @@
             .then(function (response) {
                 setTimeout(function() {
                     setResponse(JSON.stringify(response, undefined, 2));
-                }, 500);
+                }, 1500);
                 
                 // setResponse(JSON.stringify(response, undefined, 2));
             })
