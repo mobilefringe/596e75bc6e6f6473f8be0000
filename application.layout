@@ -425,7 +425,7 @@
      <!--Modal -->
     <div class="modal" id="chat_modal" tabindex="-1" role="dialog" aria-labelledby="chat_modalLabel">
         <div class="lab-modal-body modal-sm">
-            <iframe id="chat_frame" src='/chat' height="300px" style="border-radius: 5px;"></iframe>
+            <iframe id="chat_frame" src='/chat' height="300px" style="border: none; border-radius: 5px;"></iframe>
         </div>
     </div>
 </div>
