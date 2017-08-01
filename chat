@@ -62,7 +62,7 @@
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/png/1501600070000/Mall-Icon_Default2.png' width='45px' height='45px' class='circular--square' style='float: left;' /><div class='calloutright'>" + speech.data + "</div><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
     
             var d = document.getElementById('bot').lastElementChild.innerHTML;
-            document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 24), " animated flipInX", d.slice(24)].join('');
+            // document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 24), " animated flipInX", d.slice(24)].join('');
             var objDiv = document.getElementById("bot");
             objDiv.scrollTop = objDiv.scrollHeight;
         }
