@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script type="text/javascript">
-        var accessToken = 'a211c0a4ccc140aa866fba702b1573df';  //Replace access token here
+        var accessToken = '6815bff4f00341e0a5f0b6e2459340c7';  //Replace access token here
         var baseUrl = "//mallmaverickdevelopment.com/";
         
         $(document).ready(function() {
