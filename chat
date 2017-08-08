@@ -14,7 +14,7 @@
         
         $(document).ready(function() {
             // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
-            axios.post('http://mallmaverickdevelopment.com/chatbot_endpoint', {
+            axios.post('//mallmaverickdevelopment.com/chatbot_endpoint', {
                 message: "welcome",
                 property_id: 55 //Set the property ID
             })
@@ -39,7 +39,7 @@
             var text = $("#input").val();
             var d = document.getElementById('bot').innerHTML;
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
-            axios.post('http://mallmaverickdevelopment.com/chatbot_endpoint', {
+            axios.post('//mallmaverickdevelopment.com/chatbot_endpoint', {
                 message: text,
                 property_id: 55 //Set the property ID
             })
