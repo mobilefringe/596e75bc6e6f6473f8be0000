@@ -371,9 +371,9 @@ th {
 }
 #back-top{
     position:fixed;
-    z-index:9999;
-    bottom:30px;
-    right:30px;
+    z-index: 9999;
+    bottom: 30px;
+    left: 30px;
 }
 
 .map-mouse-over {
