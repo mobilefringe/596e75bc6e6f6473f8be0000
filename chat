@@ -39,12 +39,14 @@
             var text = $("#input").val();
             var d = document.getElementById('bot').innerHTML;
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
+            
             axios.post('http://mallmaverickdevelopment.com/chatbot_endpoint', {
                 message: text,
                 property_id: 55 //Set the property ID
             })
             .then(function (response) {
-                document.getElementById('bot').lastElementChild.innerHTML = "<img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502376206000/Ellipsis_small.gif'>";
+                
+                document.getElementById('bot').innerHTML = d + "<img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502376206000/Ellipsis_small.gif'>";
                 setTimeout(function() {
                     setResponse(JSON.stringify(response, undefined, 2));
                 }, 1500);
