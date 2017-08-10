@@ -51,6 +51,7 @@
                 $(typing).show();
                 
                 setTimeout(function() {
+                    $(typing).hide();
                     setResponse(JSON.stringify(response, undefined, 2));
                 }, 1500);
                 
