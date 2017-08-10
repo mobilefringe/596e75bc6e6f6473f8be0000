@@ -221,6 +221,7 @@ img {
     $(document).ready(function() {
    
         $(".close_chatbot").click(function() {
+            console.log("Hello!!")
             $("#chat_modal").remove();    
         });   
                 
