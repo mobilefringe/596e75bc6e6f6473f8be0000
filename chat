@@ -69,6 +69,8 @@
         }
 
         function setResponse(val) {
+            $(".typing").remove();
+             
             $("#response").text(val);
             speech = $.parseJSON(val);
             var d = document.getElementById('bot').innerHTML;
