@@ -424,10 +424,10 @@
     </div>
      <!--Modal -->
     <div class="modal" id="chat_modal" tabindex="-1" role="dialog" aria-labelledby="chat_modalLabel">
-        <button type="button" class="close_chatbot" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
         <div class="lab-modal-body modal-sm">
+            <button type="button" class="close_chatbot" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <iframe id="chat_frame" src='/chat' height="330px"></iframe>
         </div>
     </div>
