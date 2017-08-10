@@ -689,7 +689,7 @@
         
         $(".close_chatbot").click(function() {
             console.log("Hello!!")
-            $("#chat_modal").remove();    
+            $('#chat_modal').modal('hide');   
         }); 
     
     });
