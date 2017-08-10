@@ -689,6 +689,11 @@
             $(document).i18n();
             $('#search_input_mobile').val('')
         });
+        
+        $(".close_chatbot").click(function() {
+            $("#chat_modal").remove();    
+            $(".modal-backdrop").remove();
+        }); 
     });
     
 </script>
