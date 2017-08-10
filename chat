@@ -50,9 +50,9 @@
                 
 
                 
-                $("<div class='calloutbig'><img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502376206000/Ellipsis_small.gif'></div>").appendTo(document.getElementById('bot'));
+                $("<div class='calloutbig'><img class='typing' src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502376206000/Ellipsis_small.gif'></div>").appendTo(document.getElementById('bot'));
                 setTimeout(function() {
-                    $("<div class='calloutbig'><img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502376206000/Ellipsis_small.gif'></div>").remove();
+                    $(".typing").remove();
                     
                     setResponse(JSON.stringify(response, undefined, 2));
                 }, 1500);
