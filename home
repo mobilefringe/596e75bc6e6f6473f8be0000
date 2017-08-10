@@ -219,12 +219,6 @@ img {
 <script>
     
     $(document).ready(function() {
-   
-        $(".close_chatbot").click(function() {
-            console.log("Hello!!")
-            $("#chat_modal").remove();    
-        });   
-                
         function renderPageData (){
             var repoList = getRepoList();
             var featureList = getFeatureList();
