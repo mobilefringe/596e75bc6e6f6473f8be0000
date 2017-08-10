@@ -58,13 +58,14 @@
             var d = document.getElementById('bot').innerHTML;
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
             
-            var typing = document.getElementById('bot').innerHTML = d + "<div class='calloutbig'><img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502376206000/Ellipsis_small.gif'></div>";
+            
             
             axios.post('http://localhost:9000/chatbot_endpoint', {
                 message: text,
                 property_id: 55 //Set the property ID
             })
             .then(function (response) {
+                var typing = document.getElementById('bot').innerHTML = d + "<div class='calloutbig'><img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502376206000/Ellipsis_small.gif'></div>";
                 
                 $(typing).show();
                 
