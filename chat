@@ -95,9 +95,6 @@
         <div class="header">
             <div class="toolbar">
                 <span md-truncate flex>Mall Assistant</span>
-                <button type="button" class="close_chatbot" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
             <span flex></span>
         </div>
