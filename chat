@@ -20,7 +20,7 @@
             })
             .then(function (response) {
                 setTimeout(function() {
-                    setResponse(JSON.stringify(response, undefined, 2));
+                    initResponse(JSON.stringify(response, undefined, 2));
                 }, 1500);
             })
             .catch(function (error) {
@@ -34,11 +34,21 @@
                 }
             });
         });
-        function typing() {
+        
+        function initResponse(val) {
+            $("#response").text(val);
+            speech = $.parseJSON(val);
             var d = document.getElementById('bot').innerHTML;
+
+            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/png/1501600070000/Mall-Icon_Default2.png' width='45px' height='45px' class='circular--square' style='float: left;' /><div class='calloutright'>" + speech.data + "</div><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
             
-            document.getElementById('bot').innerHTML = d + "<div class='calloutbig'><img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502376206000/Ellipsis_small.gif'></div>";
+            var d = document.getElementById('bot').lastElementChild.innerHTML;
+            document.getElementById('bot').lastElementChild.innerHTML = [d.slice(0, 218), " animated flipInX", d.slice(218)].join('');
+            
+            var objDiv = document.getElementById("bot");
+            objDiv.scrollTop = objDiv.scrollHeight;
         }
+        
         function send() {
             var text = $("#input").val();
             var d = document.getElementById('bot').innerHTML;
@@ -51,6 +61,7 @@
             .then(function (response) {
                 
                 document.getElementById('bot').innerHTML = d + "<div class='calloutbig'><img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502376206000/Ellipsis_small.gif'></div>";
+                
                 setTimeout(function() {
                     setResponse(JSON.stringify(response, undefined, 2));
                 }, 1500);
