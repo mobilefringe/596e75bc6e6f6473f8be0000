@@ -91,6 +91,7 @@
         <div class="header">
             <div class="toolbar">
                 <span md-truncate flex>Mall Assistant</span>
+                <span class="chat_close">x</span>
             </div>
             <span flex></span>
         </div>
