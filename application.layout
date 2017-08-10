@@ -686,6 +686,11 @@
             $(document).i18n();
             $('#search_input_mobile').val('')
         });
+        
+        $(".close_chatbot").click(function() {
+            console.log("Hello!!")
+            $("#chat_modal").remove();    
+        }); 
     
     });
     
