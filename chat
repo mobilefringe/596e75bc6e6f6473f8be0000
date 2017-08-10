@@ -44,7 +44,7 @@
                 property_id: 55 //Set the property ID
             })
             .then(function (response) {
-                document.getElementById('bot').innerHTML = "<img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502375405000/Ellipsis.gif'>";
+                document.getElementById('bot').lastElementChild.innerHTML = "<img src='http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/gif/1502375405000/Ellipsis.gif'>";
                 setTimeout(function() {
                     setResponse(JSON.stringify(response, undefined, 2));
                 }, 1500);
