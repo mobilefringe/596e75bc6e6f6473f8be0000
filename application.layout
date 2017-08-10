@@ -424,6 +424,9 @@
     </div>
      <!--Modal -->
     <div class="modal" id="chat_modal" tabindex="-1" role="dialog" aria-labelledby="chat_modalLabel">
+        <button type="button" class="close_chatbot" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
         <div class="lab-modal-body modal-sm">
             <iframe id="chat_frame" src='/chat' height="330px"></iframe>
         </div>
@@ -686,16 +689,6 @@
             $(document).i18n();
             $('#search_input_mobile').val('')
         });
-        
-        $(function() {
-   
-            $(".close_chatbot").click(function() {
-                console.log("Hello!!")
-                $('#chat_modal').modal('hide');   
-            }); 
-        
-        });
-    
     });
     
 </script>
