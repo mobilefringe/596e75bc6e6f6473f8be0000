@@ -76,7 +76,7 @@
             });
             $('#location').click(function() {
                 axios.post('http://localhost:9000/chatbot_endpoint', {
-                    message: "hours",
+                    message: "location",
                     property_id: 98 //Set the property ID
                 })
                 .then(function (response) {
@@ -87,7 +87,7 @@
             });
             $('#contact').click(function() {
                 axios.post('http://localhost:9000/chatbot_endpoint', {
-                    message: "hours",
+                    message: "contact",
                     property_id: 98 //Set the property ID
                 })
                 .then(function (response) {
