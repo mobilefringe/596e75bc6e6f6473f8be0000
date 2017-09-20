@@ -68,7 +68,7 @@
             
             var stores = document.getElementById('stores');
             console.log(stores)
-            $('#stores', d).click(function() {
+            $('#stores').click(function() {
                 console.log("stores")
             });
             
