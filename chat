@@ -67,7 +67,10 @@
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><button id='stores'>STORES</button><button id='hours'>HOURS</button><button id='location'>LOCATION</button><button id='contact'>CONTACT</button><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
             
             var stores = document.getElementById('stores');
-            console.log(stores)
+            var hours = document.getElementById('hours');
+            var location = document.getElementById('location');
+            var contact = document.getElementById('contact');
+
             $('#stores').click(function() {
                 console.log("stores")
             });
