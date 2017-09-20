@@ -29,7 +29,18 @@
             .catch(function (error) {
                 console.log(error);
             });
-
+            
+            $("#stores").click(function() {
+                console.log("STORES!")
+            })
+            $("#hours").click(function() {
+                console.log("HOURS!")
+            })$("#location").click(function() {
+                console.log("LOCATION!")
+            })$("#contact").click(function() {
+                console.log("CONTACT!")
+            })
+            
             $("#input").keypress(function(event) {
                 if (event.which == 13) {
                     event.preventDefault();
