@@ -30,6 +30,12 @@
                 console.log(error);
             });
             
+       
+            var frame = $('#chat_frame').get(0).contentDocument;
+            $('#stores', frame).click(function() {
+                alert("Clicked me..!");
+            });
+
             $("#chat_frame").contents().find('#stores') {
                 $("#stores").click(function() {
                     alert("stores")
