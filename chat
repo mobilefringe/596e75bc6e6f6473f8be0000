@@ -32,7 +32,7 @@
             
        
             // var frame = $('#chat_frame').get(0).contents;
-            var frame = document.getElementById('chat_frame');
+            var frame = document.getElementById('chat_frame').contents;
             console.log(frame)
             $('#stores', frame).click(function() {
                 alert("Clicked me..!");
