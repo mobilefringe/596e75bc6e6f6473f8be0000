@@ -30,25 +30,6 @@
                 console.log(error);
             });
 
-            // var d = document.getElementById('bot').innerHTML;
-            // var stores = document.getElementById('stores');
-            // console.log(stores)
-            // $('#stores', d).click(function() {
-            //     console.log("stores")
-            // });
-            
-            $("#hours").click(function() {
-                console.log("HOURS!")
-            });
-            
-            $("#location").click(function() {
-                console.log("LOCATION!")
-            });
-            
-            $("#contact").click(function() {
-                console.log("CONTACT!")
-            });
-            
             $("#input").keypress(function(event) {
                 if (event.which == 13) {
                     event.preventDefault();
@@ -75,7 +56,15 @@
                 console.log("stores")
             });
             $('#hours').click(function() {
-                console.log("hours")
+                axios.post('http://localhost:9000/chatbot_endpoint', {
+                    message: "hours",
+                    property_id: 98 //Set the property ID
+                })
+                .then(function (response) {
+                    setTimeout(function() {
+                        setResponse(JSON.stringify(response, undefined, 2));
+                    }, 1500);
+                })
             });
             $('#location').click(function() {
                 console.log("location")
