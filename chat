@@ -22,6 +22,7 @@
                 setTimeout(function() {
                     setResponse(JSON.stringify(response, undefined, 2));
                 }, 1500);
+                prompt();
             })
             .catch(function (error) {
                 console.log(error);
@@ -38,7 +39,11 @@
                 $("#chat_modal").remove();    
             });
         });
-
+        
+        function prompt(){
+            console.log("Hello!")
+        }
+        
         function send() {
             var text = $("#input").val();
             var d = document.getElementById('bot').innerHTML;
