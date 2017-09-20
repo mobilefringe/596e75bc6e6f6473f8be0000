@@ -26,7 +26,7 @@
                     // prompt();
                     
                     var d = document.getElementById('bot').innerHTML;
-            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><button id='stores'>STORES</button><button id='hours'>HOURS</button><button id='location'>LOCATION</button><button id='contact'>CONTACT</button><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
+            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><button id='stores'> SEARCH STORES</button><button id='hours'>MALL HOURS</button><button id='location'>MALL LOCATION</button><button id='contact'>MALL CONTACT</button><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
 
                     $('#stores').click(function() {
                         $("<div class='calloutbig typing'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/gif/1502381728000/typing.gif'></div>").appendTo(document.getElementById('bot'));
