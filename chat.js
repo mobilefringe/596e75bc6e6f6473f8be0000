@@ -18,7 +18,7 @@ $(document).ready(function() {
     //     iframeWindow.inside_iframe_variable = window.outside_iframe_variable;
     // }
     
-    $('#stores', iframeWindow).click(function() {
+    $('#stores', iframe).click(function() {
                 alert("Clicked me..!");
             });
 
