@@ -2,7 +2,6 @@ $(document).ready(function() {
     var iframe = document.getElementById('chat_frame');
     console.log(iframe)
     var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-    console.log(iframeDocument)
     var iframeWindow = iframe.contentWindow;
     console.log(iframeWindow)
 
