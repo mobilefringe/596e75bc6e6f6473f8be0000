@@ -75,10 +75,26 @@
                 })
             });
             $('#location').click(function() {
-                console.log("location")
+                axios.post('http://localhost:9000/chatbot_endpoint', {
+                    message: "hours",
+                    property_id: 98 //Set the property ID
+                })
+                .then(function (response) {
+                    setTimeout(function() {
+                        setResponse(JSON.stringify(response, undefined, 2));
+                    }, 1500);
+                })
             });
             $('#contact').click(function() {
-                console.log("contact")
+                axios.post('http://localhost:9000/chatbot_endpoint', {
+                    message: "hours",
+                    property_id: 98 //Set the property ID
+                })
+                .then(function (response) {
+                    setTimeout(function() {
+                        setResponse(JSON.stringify(response, undefined, 2));
+                    }, 1500);
+                })
             });
         }
         
