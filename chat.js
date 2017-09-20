@@ -10,6 +10,11 @@ if (iframeDocument) {
 }
 
 
+    var frame = $('#chat_frame').get(0).contentDocument;
+    $('#stores', frame).click(function() {
+        alert("Clicked me..!");
+    });
+
 
 
     $("#hours").click(function() {
