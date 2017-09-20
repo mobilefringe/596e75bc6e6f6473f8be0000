@@ -3,19 +3,13 @@ $(document).ready(function() {
     console.log(iframe)
     var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
     console.log(iframeDocument)
-    var iframeContent;
-
-    if (iframeDocument) {
-        iframeContent = iframeDocument.getElementById('stores');
-        console.log(iframeContent)
-    }
-    
     var iframeWindow = iframe.contentWindow;
     console.log(iframeWindow)
 
     if (iframeWindow) {
         // you can even call jQuery or other frameworks if it is loaded inside the iframe
-        iframeContent = iframeWindow.jQuery('#frameBody');
+        iframeContent = iframeWindow.jQuery('#stores');
+        console.log(iframeContent)
     
         // or
         iframeContent = iframeWindow.$('#frameBody');
