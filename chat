@@ -32,14 +32,16 @@
             
             $("#stores").click(function() {
                 console.log("STORES!")
-            })
+            });
             $("#hours").click(function() {
                 console.log("HOURS!")
-            })$("#location").click(function() {
+            });
+            $("#location").click(function() {
                 console.log("LOCATION!")
-            })$("#contact").click(function() {
+            });
+            $("#contact").click(function() {
                 console.log("CONTACT!")
-            })
+            });
             
             $("#input").keypress(function(event) {
                 if (event.which == 13) {
