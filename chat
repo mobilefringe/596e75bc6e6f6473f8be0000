@@ -38,7 +38,7 @@
             //     alert("Clicked me..!");
             // });
             
-            var d = document.getElementById('bot').lastElementChild;
+            var d = document.getElementById('bot');
             console.log(d)
             $('#stores', d).click(function() {
                 console.log("stores")
