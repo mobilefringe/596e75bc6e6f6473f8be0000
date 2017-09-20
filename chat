@@ -30,14 +30,21 @@
                 console.log(error);
             });
             
-       
-            // var frame = $('#chat_frame').get(0).contents;
-            var frame = document.getElementById('chat_frame').contentDocument;
-            var desiredElement = iFrame.getElementById('pageBreaker');
-            console.log(frame)
-            $('#stores', frame).click(function() {
-                alert("Clicked me..!");
-            });
+            var iframe = document.getElementById('chat_frame');
+            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            var iframeContent;
+
+            if (iframeDocument) {
+                iframeContent = iframeDocument.getElementById('stores');
+            }
+
+            // // var frame = $('#chat_frame').get(0).contents;
+            // var frame = document.getElementById('chat_frame').contentDocument;
+            // var desiredElement = iFrame.getElementById('pageBreaker');
+            // console.log(frame)
+            // $('#stores', frame).click(function() {
+            //     alert("Clicked me..!");
+            // });
 
             $("#hours").click(function() {
                 console.log("HOURS!")
