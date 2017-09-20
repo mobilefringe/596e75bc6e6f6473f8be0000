@@ -31,7 +31,7 @@
             });
             
             $("#stores").click(function() {
-                console.log("STORES!")
+                console.log("stores")
             });
             
             $("#hours").click(function() {
