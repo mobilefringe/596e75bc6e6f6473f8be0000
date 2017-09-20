@@ -39,7 +39,7 @@
             // });
             
             var d = document.getElementById('bot').innerHTML;
-            var stores = d.document.getElementById('stores');
+            var stores = document.getElementById('stores');
             console.log(stores)
             $('#stores', d).click(function() {
                 console.log("stores")
