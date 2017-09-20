@@ -30,20 +30,12 @@
                 console.log(error);
             });
 
-            // // var frame = $('#chat_frame').get(0).contents;
-            // var frame = document.getElementById('chat_frame').contentDocument;
-            // var desiredElement = iFrame.getElementById('pageBreaker');
-            // console.log(frame)
-            // $('#stores', frame).click(function() {
-            //     alert("Clicked me..!");
+            // var d = document.getElementById('bot').innerHTML;
+            // var stores = document.getElementById('stores');
+            // console.log(stores)
+            // $('#stores', d).click(function() {
+            //     console.log("stores")
             // });
-            
-            var d = document.getElementById('bot').innerHTML;
-            var stores = document.getElementById('stores');
-            console.log(stores)
-            $('#stores', d).click(function() {
-                console.log("stores")
-            });
             
             $("#hours").click(function() {
                 console.log("HOURS!")
@@ -74,6 +66,11 @@
             var d = document.getElementById('bot').innerHTML;
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><button id='stores'>STORES</button><button id='hours'>HOURS</button><button id='location'>LOCATION</button><button id='contact'>CONTACT</button><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
             
+            var stores = document.getElementById('stores');
+            console.log(stores)
+            $('#stores', d).click(function() {
+                console.log("stores")
+            });
             
         }
         
