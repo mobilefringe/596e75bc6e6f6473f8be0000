@@ -6,6 +6,7 @@ var iframeContent;
 
 if (iframeDocument) {
     iframeContent = iframeDocument.getElementById('stores');
+    console.log(iframeContent)
 }
 
 
