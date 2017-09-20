@@ -31,7 +31,7 @@
             });
             
        
-            var frame = $('#chat_frame').get(0).contentDocument;
+            var frame = $('#chat_frame').get(0).contents;
             $('#stores', frame).click(function() {
                 alert("Clicked me..!");
             });
