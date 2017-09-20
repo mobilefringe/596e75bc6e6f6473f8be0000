@@ -18,7 +18,7 @@ $(document).ready(function() {
     // }
     
     $('#stores', iframe).click(function() {
-                alert("Clicked me..!");
+                console.log("stores")
             });
 
     $("#hours").click(function() {
