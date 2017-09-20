@@ -17,6 +17,10 @@ $(document).ready(function() {
         // or even use any other global variable
         iframeWindow.inside_iframe_variable = window.outside_iframe_variable;
     }
+    
+    $('#stores', iframeWindow).click(function() {
+                alert("Clicked me..!");
+            });
 
     $("#hours").click(function() {
         console.log("HOURS!")
