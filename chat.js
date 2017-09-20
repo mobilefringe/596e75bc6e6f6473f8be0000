@@ -11,6 +11,7 @@ $(document).ready(function() {
     }
     
     var iframeWindow = iframe.contentWindow;
+    console.log(iframeWindow)
 
     if (iframeWindow) {
         // you can even call jQuery or other frameworks if it is loaded inside the iframe
