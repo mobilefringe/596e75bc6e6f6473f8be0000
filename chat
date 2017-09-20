@@ -39,7 +39,8 @@
             // });
             
             var d = document.getElementById('bot').innerHTML;
-            console.log(d)
+            var stores = d.document.getElementById('stores');
+            console.log(stores)
             $('#stores', d).click(function() {
                 console.log("stores")
             });
