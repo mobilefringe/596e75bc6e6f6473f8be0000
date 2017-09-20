@@ -6,17 +6,17 @@ $(document).ready(function() {
     var iframeWindow = iframe.contentWindow;
     console.log(iframeWindow)
 
-    if (iframeWindow) {
-        // you can even call jQuery or other frameworks if it is loaded inside the iframe
-        iframeContent = iframeWindow.$('#stores');
-        console.log(iframeContent)
+    // if (iframeWindow) {
+    //     // you can even call jQuery or other frameworks if it is loaded inside the iframe
+    //     iframeContent = iframeWindow.$('#stores');
+    //     console.log(iframeContent)
     
-        // or
-        iframeContent = iframeWindow.$('#frameBody');
+    //     // or
+    //     iframeContent = iframeWindow.$('#frameBody');
     
-        // or even use any other global variable
-        iframeWindow.inside_iframe_variable = window.outside_iframe_variable;
-    }
+    //     // or even use any other global variable
+    //     iframeWindow.inside_iframe_variable = window.outside_iframe_variable;
+    // }
     
     $('#stores', iframeWindow).click(function() {
                 alert("Clicked me..!");
