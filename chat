@@ -30,8 +30,10 @@
                 console.log(error);
             });
             
-            $("#stores").click(function() {
-                alert("stores")
+            $("#chat_frame").contents().find('#stores') {
+                $("#stores").click(function() {
+                    alert("stores")
+                });
             });
             
             $("#hours").click(function() {
