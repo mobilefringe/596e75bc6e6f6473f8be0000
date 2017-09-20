@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     if (iframeWindow) {
         // you can even call jQuery or other frameworks if it is loaded inside the iframe
-        iframeContent = iframeWindow.jQuery('#stores');
+        iframeContent = iframeWindow.$('#stores');
         console.log(iframeContent)
     
         // or
