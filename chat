@@ -74,7 +74,15 @@
             $('#stores').click(function() {
                 console.log("stores")
             });
-            
+            $('#hours').click(function() {
+                console.log("hours")
+            });
+            $('#location').click(function() {
+                console.log("location")
+            });
+            $('#contact').click(function() {
+                console.log("contact")
+            });
         }
         
         function send() {
