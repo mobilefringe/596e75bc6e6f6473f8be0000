@@ -43,7 +43,10 @@
         });
         
         function prompt(){
-            console.log("Hello!")
+            console.log("Hello!");
+            var d = document.getElementById('bot').innerHTML;
+
+            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutright'>THIS IS MY BUTTON</div><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
         }
         
         function send() {
