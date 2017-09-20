@@ -45,7 +45,7 @@
         function prompt(){
             console.log("Hello!");
             var d = document.getElementById('bot').innerHTML;
-            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><button id='stores' class='prompt'>STORES</button><button id='hours' class='prompt'>HOURS</button><button id='location' class='prompt'>LOCATION</button><button id='contact' class='prompt'>CONTACT</button><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
+            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><button id='stores' class='prompt'>STORE SEARCH</button><button id='hours' class='prompt'>MALL HOURS</button><button id='location' class='prompt'>MALL LOCATION</button><button id='contact' class='prompt'>CONTACT US</button><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
 
             $('#stores').click(function() {
                 $("<div class='calloutbig typing'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/gif/1502381728000/typing.gif'></div>").appendTo(document.getElementById('bot'));
