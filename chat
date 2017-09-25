@@ -77,6 +77,11 @@
                 })
             });
             $('#location').click(function() {
+                $("<div class='calloutbig typing'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/gif/1502381728000/typing.gif'></div>").appendTo(document.getElementById('bot'));
+                
+                var objDiv = document.getElementById("bot");
+                objDiv.scrollTop = objDiv.scrollHeight;
+                
                 axios.post('http://localhost:9000/chatbot_endpoint', {
                     message: "location",
                     property_id: 98 //Set the property ID
