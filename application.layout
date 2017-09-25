@@ -429,7 +429,7 @@
             <button type="button" class="close_chatbot" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <iframe id="chat_frame" src='/chat' height="330px"></iframe>
+            <iframe id="chat_frame" src='/chat' height="400px"></iframe>
         </div>
     </div>
 </div>
