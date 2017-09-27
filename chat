@@ -214,6 +214,7 @@
         }
 
         function setResponse(val) {
+            promptButtons();
             $(".typing").remove();
              
             $("#response").text(val);
