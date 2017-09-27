@@ -40,12 +40,8 @@
             $(".close_chatbot").click(function() {
                 $("#chat_modal").remove();    
             });
-        });
-        
-        function prompt(){
-            var d = document.getElementById('bot').innerHTML;
-            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><button id='stores' class='prompt'>STORE SEARCH</button><button id='hours' class='prompt'>MALL HOURS</button><button id='location' class='prompt'>MALL LOCATION</button><button id='contact' class='prompt'>CONTACT US</button><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
-
+            
+            
             $('#stores').click(function() {
                 $("<div class='calloutbig typing'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/gif/1502381728000/typing.gif'></div>").appendTo(document.getElementById('bot'));
                 
@@ -110,6 +106,76 @@
                     }, 1500);
                 })
             });
+        });
+        
+        function prompt(){
+            var d = document.getElementById('bot').innerHTML;
+            document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><button id='stores' class='prompt'>STORE SEARCH</button><button id='hours' class='prompt'>MALL HOURS</button><button id='location' class='prompt'>MALL LOCATION</button><button id='contact' class='prompt'>CONTACT US</button><div class='message-from message-from-bot'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
+
+            // $('#stores').click(function() {
+            //     $("<div class='calloutbig typing'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/gif/1502381728000/typing.gif'></div>").appendTo(document.getElementById('bot'));
+                
+            //     var objDiv = document.getElementById("bot");
+            //     objDiv.scrollTop = objDiv.scrollHeight;
+                
+            //     axios.post('http://localhost:9000/chatbot_endpoint', {
+            //         message: "store name",
+            //         property_id: 55 //Set the property ID
+            //     })
+            //     .then(function (response) {
+            //         setTimeout(function() {
+            //             setResponse(JSON.stringify(response, undefined, 2));
+            //         }, 1500);
+            //     })
+            // });
+            // $('#hours').click(function() {
+            //     $("<div class='calloutbig typing'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/gif/1502381728000/typing.gif'></div>").appendTo(document.getElementById('bot'));
+                
+            //     var objDiv = document.getElementById("bot");
+            //     objDiv.scrollTop = objDiv.scrollHeight;
+                
+            //     axios.post('http://localhost:9000/chatbot_endpoint', {
+            //         message: "hours",
+            //         property_id: 55 //Set the property ID
+            //     })
+            //     .then(function (response) {
+            //         setTimeout(function() {
+            //             setResponse(JSON.stringify(response, undefined, 2));
+            //         }, 1500);
+            //     })
+            // });
+            // $('#location').click(function() {
+            //     $("<div class='calloutbig typing'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/gif/1502381728000/typing.gif'></div>").appendTo(document.getElementById('bot'));
+                
+            //     var objDiv = document.getElementById("bot");
+            //     objDiv.scrollTop = objDiv.scrollHeight;
+                
+            //     axios.post('http://localhost:9000/chatbot_endpoint', {
+            //         message: "location",
+            //         property_id: 55 //Set the property ID
+            //     })
+            //     .then(function (response) {
+            //         setTimeout(function() {
+            //             setResponse(JSON.stringify(response, undefined, 2));
+            //         }, 1500);
+            //     })
+            // });
+            // $('#contact').click(function() {
+            //     $("<div class='calloutbig typing'><img src='//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/gif/1502381728000/typing.gif'></div>").appendTo(document.getElementById('bot'));
+                
+            //     var objDiv = document.getElementById("bot");
+            //     objDiv.scrollTop = objDiv.scrollHeight;
+                
+            //     axios.post('http://localhost:9000/chatbot_endpoint', {
+            //         message: "contact",
+            //         property_id: 55 //Set the property ID
+            //     })
+            //     .then(function (response) {
+            //         setTimeout(function() {
+            //             setResponse(JSON.stringify(response, undefined, 2));
+            //         }, 1500);
+            //     })
+            // });
         }
         
         function send() {
