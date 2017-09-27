@@ -1,13 +1,13 @@
 <html>
 <head>
-    <title>API Example</title>
+    <title>EMMA</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,300italic" rel="stylesheet" type="text/css">
     <link href="chat.css" rel="stylesheet" />
     <link href="animate.css" rel="stylesheet" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script type="text/javascript">
         var accessToken = '6815bff4f00341e0a5f0b6e2459340c7';  //Replace access token here
         var baseUrl = "http://mallmaverickdevelopment.com/";
