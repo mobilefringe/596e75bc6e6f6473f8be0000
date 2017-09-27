@@ -111,9 +111,6 @@
                     }, 1500);
                 })
             });
-            
-            var objDiv = document.getElementById("bot");
-            objDiv.scrollTop = objDiv.scrollHeight;
         }
         
         function send() {
