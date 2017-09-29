@@ -16,7 +16,7 @@
             // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
             axios.post('http://localhost:9000/chatbot_endpoint', {
                 message: "welcome",
-                property_id: 116 //Set the property ID
+                property_id: 55 //Set the property ID
             })
             .then(function (response) {
                 setTimeout(function() {
@@ -57,7 +57,7 @@
                 
                 axios.post('http://localhost:9000/chatbot_endpoint', {
                     message: "store name",
-                    property_id: 116 //Set the property ID
+                    property_id: 55 //Set the property ID
                 })
                 .then(function (response) {
                     setTimeout(function() {
@@ -75,7 +75,7 @@
                 
                 axios.post('http://localhost:9000/chatbot_endpoint', {
                     message: "hours",
-                    property_id: 116 //Set the property ID
+                    property_id: 55 //Set the property ID
                 })
                 .then(function (response) {
                     setTimeout(function() {
@@ -93,7 +93,7 @@
                 
                 axios.post('http://localhost:9000/chatbot_endpoint', {
                     message: "location",
-                    property_id: 116 //Set the property ID
+                    property_id: 55 //Set the property ID
                 })
                 .then(function (response) {
                     setTimeout(function() {
@@ -111,7 +111,7 @@
                 
                 axios.post('http://localhost:9000/chatbot_endpoint', {
                     message: "contact",
-                    property_id: 116 //Set the property ID
+                    property_id: 55 //Set the property ID
                 })
                 .then(function (response) {
                     setTimeout(function() {
@@ -129,7 +129,7 @@
             
             axios.post('http://localhost:9000/chatbot_endpoint', {
                 message: text,
-                property_id: 116 //Set the property ID
+                property_id: 55 //Set the property ID
             })
             .then(function (response) {
 
