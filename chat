@@ -169,6 +169,8 @@
             
             var objDiv = document.getElementById("bot");
             objDiv.scrollTop = objDiv.scrollHeight;
+            
+            promptButtons();
         }
     </script>
 </head>
