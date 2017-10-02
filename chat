@@ -170,7 +170,7 @@
             var objDiv = document.getElementById("bot");
             objDiv.scrollTop = objDiv.scrollHeight;
             
-            promptButtons();
+            // promptButtons();
         }
     </script>
 </head>
