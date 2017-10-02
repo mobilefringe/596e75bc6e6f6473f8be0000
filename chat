@@ -62,7 +62,6 @@
                 .then(function (response) {
                     setTimeout(function() {
                         setResponse(JSON.stringify(response, undefined, 2));
-                        // promptButtons();
                     }, 1500);
                 })
             });
@@ -80,7 +79,6 @@
                 .then(function (response) {
                     setTimeout(function() {
                         setResponse(JSON.stringify(response, undefined, 2));
-                        // promptButtons();
                     }, 1500);
                 })
             });
@@ -98,7 +96,6 @@
                 .then(function (response) {
                     setTimeout(function() {
                         setResponse(JSON.stringify(response, undefined, 2));
-                        // promptButtons();
                     }, 1500);
                 })
             });
@@ -116,7 +113,6 @@
                 .then(function (response) {
                     setTimeout(function() {
                         setResponse(JSON.stringify(response, undefined, 2));
-                        // promptButtons();
                     }, 1500);
                 })
             });
