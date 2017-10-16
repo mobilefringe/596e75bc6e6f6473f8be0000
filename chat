@@ -14,6 +14,22 @@
         
         $(document).ready(function() {
             // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
+            
+            $.ajax({
+                url: 'https://mallmaverickstaging.com/api/chatbot_endpoint',
+                type: 'post',
+                data: {
+                    message: "welcome",
+                    property_id: 29
+                },
+                success: function( data, textStatus, jQxhr ){
+                    console.log(data);
+                },
+                error: function( jqXhr, textStatus, errorThrown ){
+                    console.log( errorThrown );
+                }
+            })
+            /*
             axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                 message: "welcome",
                 property_id: 29 //Set the property ID
@@ -30,7 +46,7 @@
             .catch(function (error) {
                 console.log(error);
             });
-
+            */
             $("#input").keypress(function(event) {
                 if (event.which == 13) {
                     event.preventDefault();
