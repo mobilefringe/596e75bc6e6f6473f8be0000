@@ -14,7 +14,7 @@
         
         $(document).ready(function() {
             // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
-            axios.post('http://mallmaverickstaging.com/chatbot_endpoint', {
+            axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                 message: "welcome",
                 property_id: 29 //Set the property ID
             })
@@ -55,7 +55,7 @@
                 var objDiv = document.getElementById("bot");
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
-                axios.post('http://mallmaverickstaging.com/chatbot_endpoint', {
+                axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                     message: "store name",
                     property_id: 29 //Set the property ID
                 })
@@ -72,7 +72,7 @@
                 var objDiv = document.getElementById("bot");
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
-                axios.post('http://mallmaverickstaging.com/chatbot_endpoint', {
+                axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                     message: "hours",
                     property_id: 29 //Set the property ID
                 })
@@ -89,7 +89,7 @@
                 var objDiv = document.getElementById("bot");
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
-                axios.post('http://mallmaverickstaging.com/chatbot_endpoint', {
+                axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                     message: "location",
                     property_id: 29 //Set the property ID
                 })
@@ -106,7 +106,7 @@
                 var objDiv = document.getElementById("bot");
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
-                axios.post('http://mallmaverickstaging.com/chatbot_endpoint', {
+                axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                     message: "contact",
                     property_id: 29 //Set the property ID
                 })
@@ -123,7 +123,7 @@
             var d = document.getElementById('bot').innerHTML;
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
             
-            axios.post('http://mallmaverickstaging.com/chatbot_endpoint', {
+            axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                 message: text,
                 property_id: 29 //Set the property ID
             })
