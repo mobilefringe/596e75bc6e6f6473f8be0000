@@ -82,6 +82,9 @@
                     </div>
                 </script>
             </div>
+        </div>
+    </div>
+</div>
             
 <!--For more information please see http://learnjs.io/blog/2013/11/30/snapsvg-resources/-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
