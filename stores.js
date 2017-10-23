@@ -1,4 +1,5 @@
 $("#directory_link").addClass("active");
+
 $(document).ready(function() {
     function renderAll(){
         var stores = getStoresList();
@@ -201,26 +202,25 @@ $(document).ready(function() {
     };
 
     function populate_stores_for_cat (categoryid, store){
-        // console.log (categoryid);
-        // console.log(store);
-        $('#cat'+ categoryid).append('<section class="service_teasers" id="store_for_'+store.id+'"><div class="service_teaser"><div class="row"><div class="service_photo col-sm-4 col-md-4"><a href="../stores/'+store.slug+'"> <figure style="background-image:url('+store.alt_store_front_url+')"></figure></a></div><div class="service_details col-sm-8 col-md-8"><h2 class="section_header skincolored"><b><a href="../stores/'+store.slug+'">'+store.name+'</a></b></h2><p>'+store.description+'</p><span><p class="pull-left"><i class="fa fa-phone"></i><a href="tel:'+store.phone+'">  '+store.phone+'</a></p><a href="../stores/'+store.slug+'" class="btn btn-primary pull-right">view detail</a></div></div></div></div></section>');    }
-    
-        loadMallData(renderAll);  
-    });
-
-    function show_cat(link, type){
-        if (type == "all"){
-            $("#store_list_container").show();
-            $(".cat_list_div").hide();    
-        } else {
-            $("#store_list_container").hide();
-            $(".cat_list_div").hide();
-            $("#"+link.id).show();    
-        }
+        $('#cat'+ categoryid).append('<section class="service_teasers" id="store_for_'+store.id+'"><div class="service_teaser"><div class="row"><div class="service_photo col-sm-4 col-md-4"><a href="../stores/'+store.slug+'"> <figure style="background-image:url('+store.alt_store_front_url+')"></figure></a></div><div class="service_details col-sm-8 col-md-8"><h2 class="section_header skincolored"><b><a href="../stores/'+store.slug+'">'+store.name+'</a></b></h2><p>'+store.description+'</p><span><p class="pull-left"><i class="fa fa-phone"></i><a href="tel:'+store.phone+'">  '+store.phone+'</a></p><a href="../stores/'+store.slug+'" class="btn btn-primary pull-right">view detail</a></div></div></div></div></section>');    
     }
+    
+    loadMallData(renderAll);  
+});
 
-    // hide #back-top first
-    $("#back-top").hide();
+function show_cat(link, type){
+    if (type == "all"){
+        $("#store_list_container").show();
+        $(".cat_list_div").hide();    
+    } else {
+        $("#store_list_container").hide();
+        $(".cat_list_div").hide();
+        $("#"+link.id).show();    
+    }
+}
+
+// hide #back-top first
+$("#back-top").hide();
 
 // fade in #back-top
 $(function () {
