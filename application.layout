@@ -265,7 +265,6 @@
         background: linear-gradient(to right,#AEACAC,#C8C8C8, #AEACAC); 
         box-shadow: 0px 0px 30px lightgray inset;
     }
-    
     #description_section{
          /* For Safari 5.1 to 6.0 */
         background: -webkit-linear-gradient(left,#AEACAC,#C8C8C8, #AEACAC);
@@ -277,27 +276,23 @@
         background: linear-gradient(to right,#AEACAC,#C8C8C8, #AEACAC); 
         box-shadow: 0px 0px 30px lightgray inset;
     }
-    
     .section_header{}
     .promo_header{
         border-bottom:solid 1px #cccccc;
         padding-bottom:10px;
     }
-    
     .breadcrumb a {
         color:green !important;
     }
     .right_column_header {
         color: black ;
     }
-    
     .navbar .nav li a:hover {
         color:black !important;
-    
     }
-     .site-map-section a:hover {
-         color: #c8c8c8 !important;
-     }
+    .site-map-section a:hover {
+        color: #c8c8c8 !important;
+    }
     @media (max-width: 767px) {
         .main_window{
             width:100%;
@@ -305,8 +300,6 @@
             border-top:none !important;
         }  
     }
-
-    
 </style>
 <body>
 <header>
@@ -355,7 +348,6 @@
                     <li><a href="/posts">Blog</a></li>
                 </ul>
             </div>
-
             <div class="collapse navbar-collapse">              
                 <ul class="nav pull-right navbar-nav custom_nav">
                     <li class=" show_hover active_nav" id="home_link"><a href="/">Home</a></li>
@@ -382,7 +374,6 @@
                 </ul>
             </div>
         </div>
-    
         <div id="search_wrapper">
             <div style="">
                 <label for="search_input" style="display:none">Search</label>
@@ -596,8 +587,8 @@
     
         function renderPageData (){
             var propertyDetails = getPropertyDetails();
-            renderPropertyLogo('#logo_template','#site_logo',propertyDetails);
-            renderPropertyFooter('#footer_template','#footer_container',propertyDetails);
+            renderPropertyLogo('#logo_template','#site_logo', propertyDetails);
+            renderPropertyFooter('#footer_template','#footer_container', propertyDetails);
             renderTodaysHours('#todays_hours_search_template','#todays-hours-search');
             var posts = getAllPublishedPosts();
             var published_posts = posts.sortBy(function(o){ return new Date(o.publish_date) }).reverse().splice(0,2);
