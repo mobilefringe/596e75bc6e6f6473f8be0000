@@ -78,7 +78,8 @@
                                     {{/promotions.length}}
                                 </p>
                             </div>
-                        <hr>
+                            <hr>
+                        </div>
                     </div>
                 </script>
             </div>
