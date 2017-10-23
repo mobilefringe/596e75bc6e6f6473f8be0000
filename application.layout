@@ -3,10 +3,9 @@
 <head>
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,300italic" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
-    <title>Twin Pines Mall</title>
-
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twin Pines Mall</title>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/png/1478016619000/Screen Shot 2016-11-01 at 12.10.11 PM.png" type="image/x-icon" />
@@ -154,7 +153,7 @@
     body{
         background:white;
     }
-    @media only screen and (max-width: 767px){
+    @media only screen and (max-width: 767px)
         .full_page_photo {
             height: 300px;
             top: 0px !important;
