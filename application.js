@@ -10,7 +10,7 @@ function renderLayoutHours(container, template, collection){
             var open_time = moment(val.open_time).tz(getPropertyTimeZone());
             var close_time = moment(val.close_time).tz(getPropertyTimeZone());
             
-            val.h = open_time.format("h a") + " - " + close_time.format("h a")
+            val.h = open_time.format("ha") + " - " + close_time.format("ha")
             var rendered = Mustache.render(template_html,val);
             item_rendered.push(rendered);
         } catch (e){
@@ -32,10 +32,10 @@ function renderHomeBlog(container, template, collection){
         } else {
             val.post_image = val.image_url;
         }
+        
         if(val.body.length > 55){
             val.description_short = val.body.substring(0,55) + "...";
-        }
-        else{
+        } else {
             val.description_short = val.body;
         }
         val.description_short = val.description_short.replace("&amp;", "&");
