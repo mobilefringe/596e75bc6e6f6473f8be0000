@@ -1,89 +1,96 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,300italic" rel="stylesheet" type="text/css">
-<meta charset="utf-8">
-<title>Twin Pines Mall</title>
-<script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,300italic" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Twin Pines Mall</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-     ga('create', 'UA CODE IN HERE', 'auto');
-     ga('send', 'pageview');
-</script>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/60cb7d89e157debbb7914a941327ad2c/animate.css" rel="stylesheet" type="text/css">
-<link href="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/f6dbff9c3ff2572186f780a16fceabf0/flexslider.css" rel="stylesheet">
-<link rel="stylesheet" href="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/60cb7d89e157debbb7914a941327ad2c/prettyPhoto.css" type="text/css" media="screen">
-<link href="http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/text/css/1336694782000/jquery.simplyscroll.css" rel="stylesheet">
-<link href="/application.css" rel="stylesheet" type="text/css">
-<link href="/chat.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/image/png/1478016619000/Screen Shot 2016-11-01 at 12.10.11 PM.png" type="image/x-icon" />
 
-<script type="text/javascript" src="http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/modernizr.custom.48287.js"></script>
-<!-- favicon -->
-<link rel="shortcut icon" href="http://assets.codecloudapp.com/sites/596e75bc6e6f6473f8be0000/image/png/1478016619000/Screen Shot 2016-11-01 at 12.10.11 PM.png" type="image/x-icon" />
+    <!-- CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/60cb7d89e157debbb7914a941327ad2c/animate.css" rel="stylesheet">
+    <link href="//kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/f6dbff9c3ff2572186f780a16fceabf0/flexslider.css" rel="stylesheet">
+    <link href="//kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/60cb7d89e157debbb7914a941327ad2c/prettyPhoto.css" rel="stylesheet">
+    <link href="//codecloud.cdn.speedyrails.net/sites/596e75bc6e6f6473f8be0000/text/css/1336694782000/jquery.simplyscroll.css" rel="stylesheet">
+    <link href="/application.css" rel="stylesheet" type="text/css">
+    <link href="/chat.css" rel="stylesheet" type="text/css">
 
-<!-- jQuery Version 1.11.0 -->
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
-<script src="//s3.amazonaws.com/kodekloud/sites/55887c646e6f642257020000/application/x-javascript/1336749994000/jquery.simplyscroll.min.js"></script>
-<!--Mustache is a client side templating engine https://github.com/janl/mustache.js/ -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
-<!--jReject is used to warn users certain browsers aren't compatible with this site-->
-<script src="//cdn.jsdelivr.net/jquery.jreject/1.0.2/js/jquery.reject.js"></script>
-<link href="//cdn.jsdelivr.net/jquery.jreject/1.0.2/css/jquery.reject.css" rel="stylesheet" type="text/css">
-<!--MallMaverick v=0.3-->
-<script src="http://mallmaverick.codecloudapp.com/mallmaverick.js?v=0.3"></script>
-<script src="http://mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
-<script src="/application.js"></script>
-<script src="/chat.js"></script>
-<script>
-    $(document).ready(function() {
-        $.reject({  
-            reject: { all: false, msie: 9 },  
-            header: 'Thanks for visiting 10 Dundas East', // Header Text  
-            paragraph1: 'Unfortunately your browser is not officially supported with our site', // Paragraph 1  
-            paragraph2: 'For the best experience please install one of the many optional browsers below to proceed',  
-            closeMessage: 'You may continue using the site however certain features and content may not be accessible. Thank you.',
-            closeCookie: true,
-            browserInfo: { // Settings for which browsers to display  
-                chrome: {  
-                    // Text below the icon  
-                    text: 'Google Chrome',  
-                    // URL For icon/text link  
-                    url: 'http://www.google.com/chrome/',  
-                    // (Optional) Use "allow" to customized when to show this option  
-                    // Example: to show chrome only for IE users  
-                    // allow: { all: false, msie: true }  
-                },  
-                firefox: {  
-                    text: 'Mozilla Firefox',  
-                    url: 'http://www.mozilla.com/firefox/'  
-                },  
-                safari: {  
-                    text: 'Safari',  
-                    url: 'http://www.apple.com/safari/download/'  
-                },  
-                opera: {  
-                    text: 'Opera',  
-                    url: 'http://www.opera.com/download/'  
-                },  
-                msie: {  
-                    text: 'Internet Explorer',  
-                    url: 'http://www.microsoft.com/windows/Internet-explorer/'  
-                }  
-            },// Message below close window link  
-            imagePath: '//cdn.jsdelivr.net/jquery.jreject/1.0.2/images/'
-        });      
-    });
-    setEndPoint('https://twinpines.mallmaverick.com/api/v3/twinpines/all.json');
-    sessionStorage.setItem('primary_locale', 'en-CA');
-    sessionStorage.setItem('secondary_locale', 'fr-CA');
-</script>
+    <!-- JS -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/360754705c291ba7cd4a4a18102adbaf/modernizr.custom.48287.js"></script>
+    <script src="//s3.amazonaws.com/kodekloud/sites/55887c646e6f642257020000/application/x-javascript/1336749994000/jquery.simplyscroll.min.js"></script>
+
+    <!--Mustache is a client side templating engine https://github.com/janl/mustache.js/ -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    <!--jReject is used to warn users certain browsers aren't compatible with this site-->
+    <script src="//cdn.jsdelivr.net/jquery.jreject/1.0.2/js/jquery.reject.js"></script>
+    <link href="//cdn.jsdelivr.net/jquery.jreject/1.0.2/css/jquery.reject.css" rel="stylesheet">
+
+    <!--MallMaverick v=0.3-->
+    <script src="//mallmaverick.codecloudapp.com/mallmaverick_v4.js"></script>
+    <script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
+    <script src="/application.js"></script>
+    <script src="/chat.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $.reject({  
+                reject: { all: false, msie: 9 },  
+                header: 'Thanks for visiting 10 Dundas East', // Header Text  
+                paragraph1: 'Unfortunately your browser is not officially supported with our site', // Paragraph 1  
+                paragraph2: 'For the best experience please install one of the many optional browsers below to proceed',  
+                closeMessage: 'You may continue using the site however certain features and content may not be accessible. Thank you.',
+                closeCookie: true,
+                browserInfo: { // Settings for which browsers to display  
+                    chrome: {  
+                        // Text below the icon  
+                        text: 'Google Chrome',  
+                        // URL For icon/text link  
+                        url: 'http://www.google.com/chrome/',  
+                        // (Optional) Use "allow" to customized when to show this option  
+                        // Example: to show chrome only for IE users  
+                        // allow: { all: false, msie: true }  
+                    },  
+                    firefox: {  
+                        text: 'Mozilla Firefox',  
+                        url: 'http://www.mozilla.com/firefox/'  
+                    },  
+                    safari: {  
+                        text: 'Safari',  
+                        url: 'http://www.apple.com/safari/download/'  
+                    },  
+                    opera: {  
+                        text: 'Opera',  
+                        url: 'http://www.opera.com/download/'  
+                    },  
+                    msie: {  
+                        text: 'Internet Explorer',  
+                        url: 'http://www.microsoft.com/windows/Internet-explorer/'  
+                    }  
+                },// Message below close window link  
+                imagePath: '//cdn.jsdelivr.net/jquery.jreject/1.0.2/images/'
+            });      
+        });
+        setEndPoint('//twinpines.mallmaverick.com/api/v3/twinpines/all.json');
+        sessionStorage.setItem('primary_locale', 'en-CA');
+        sessionStorage.setItem('secondary_locale', 'fr-CA');
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA CODE IN HERE', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
 <style>
     /*custom styles*/
