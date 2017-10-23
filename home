@@ -193,7 +193,6 @@
     </div>
 </section>
 <script>
-    
     $(document).ready(function() {
         function renderPageData (){
             var repoList = getRepoList();
@@ -234,37 +233,33 @@
             $.each( banners , function( key, val ) {
                 today = new Date;
                 start = new Date (val.start_date);
-               
                 start.setDate(start.getDate());
-               if(val.url == "" || val.url === null){
-                   val.css = "style=cursor:default;";
-                   val.noLink = "return false";
-               }
-               if (start <= today){
-                 if (val.end_date){
-                     end = new Date (val.end_date);
-                     end.setDate(end.getDate() + 1);
-                     if (end >= today){
-                       item_list.push(val);  
-                     }
-                     
-                 } else {
-                     item_list.push(val);
-                 }
-               
-                
-               }
+                if(val.url == "" || val.url === null){
+                    val.css = "style=cursor:default;";
+                    val.noLink = "return false";
+                }
+                if (start <= today){
+                    if (val.end_date){
+                        end = new Date (val.end_date);
+                        end.setDate(end.getDate() + 1);
+                        if (end >= today){
+                            item_list.push(val);  
+                        }
+                    } else {
+                        item_list.push(val);
+                    }
+                }
             });
 
             $.each( item_list , function( key, val ) {
                 var repo_rendered = Mustache.render(banner_template_html,val);
                 item_rendered.push(repo_rendered);
-               
             });
             
             $(home_banner).show();
             $(home_banner).html(item_rendered.join(''));
             $('.item').first().addClass('active');
+            
             $('.flexslider').flexslider({
                 animation: "slide",
                 controlNav: true,
@@ -288,7 +283,6 @@
                     } else {
                         val.alt_promo_image_url = "http://kodekloud.s3.amazonaws.com/sites/54b83f086e6f646b45000000/dcd66cb0efbccf1a9dc76822e0b9da23/logo_10dundas.png"
                     }
-                    
                 } else {
                     val.alt_promo_image_url = (val.promo_image_url_abs);
                     if (val.promotionable_type == "Store") {
