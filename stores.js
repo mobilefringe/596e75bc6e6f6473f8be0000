@@ -37,64 +37,58 @@ $(document).ready(function() {
         });
     }
 
-
-
-
-function renderSVGMap(){
-    var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
-    var didPanZoom = false;
-    if(navigator.appVersion.indexOf("MSIE 9.") == -1){
-        $('#map').bind('mousemove', function(e){
-            //console.log(e.pageX+","+e.pageY);
-           $('#pop-over').css({'top':e.pageY+20,'left':e.pageX-70});
-        });
-        var s = Snap("#map");
-        var stores = getStoresList();
-        console.log (getSVGMapURL())
-        Snap.load(getSVGMapURL(), function (f) {
-            $.each( stores, function( key, value ) {
-                if(value.svgmap_region != null && typeof(value.svgmap_region)  != 'undefined'){
-                    var svg_id = "#" + value.svgmap_region;
-                    f.select(svg_id).mouseover(function() {
-                        if(typeof(value) != 'undefined' && value != null){
-                            this.addClass("map-mouse-over");
-                            $("#pop-over").show();
-                            $("#pop-over-map-name").html(value.name);
-                            $("#pop-over-map-phone").html(value.phone);
-                        }
-                                  
-                    });
-                        
-                    //add the mouse up handler for hiding the pop over when done hovering
-                    f.select(svg_id).mouseout(function() {
-                        this.removeClass("map-mouse-over");
-                        $("#pop-over").hide(0);
-                        
-                    });
-                        
-                    //add the mouse up function for when the user clicks a store
-                    f.select(svg_id).mouseup(function() {
-                        
-                        if(!isMobile && !didPanZoom){
-                            
-                            goToStore(value);
-                        }
-                        didPanZoom = false;
-                              
-                    });
-                }
+    function renderSVGMap(){
+        var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+        var didPanZoom = false;
+        if(navigator.appVersion.indexOf("MSIE 9.") == -1){
+            $('#map').bind('mousemove', function(e){
+                //console.log(e.pageX+","+e.pageY);
+               $('#pop-over').css({'top':e.pageY+20,'left':e.pageX-70});
             });
-            s.append(f.select("svg"));
-        });
-        var startingMapTransform = 'scale(0.35)';
-        var startingPanX =-240;
-        var startingPanY = -270;
-        if(isMobile) {
+            var s = Snap("#map");
+            var stores = getStoresList();
+            console.log (getSVGMapURL())
+            Snap.load(getSVGMapURL(), function (f) {
+                $.each( stores, function( key, value ) {
+                    if(value.svgmap_region != null && typeof(value.svgmap_region)  != 'undefined'){
+                        var svg_id = "#" + value.svgmap_region;
+                        f.select(svg_id).mouseover(function() {
+                            if(typeof(value) != 'undefined' && value != null){
+                                this.addClass("map-mouse-over");
+                                $("#pop-over").show();
+                                $("#pop-over-map-name").html(value.name);
+                                $("#pop-over-map-phone").html(value.phone);
+                            }
+                                      
+                        });
+                            
+                        //add the mouse up handler for hiding the pop over when done hovering
+                        f.select(svg_id).mouseout(function() {
+                            this.removeClass("map-mouse-over");
+                            $("#pop-over").hide(0);
+                            
+                        });
+                            
+                        //add the mouse up function for when the user clicks a store
+                        f.select(svg_id).mouseup(function() {
+                            if(!isMobile && !didPanZoom){
+                                goToStore(value);
+                            }
+                            didPanZoom = false;
+                        });
+                    }
+                });
+                s.append(f.select("svg"));
+            });
+            var startingMapTransform = 'scale(0.35)';
+            var startingPanX =-240;
+            var startingPanY = -270;
+            if(isMobile) {
                 startingMapTransform = 'scale(0.3)';
                 startingPanX = -140;
                 startingPanY = -140;
-        }
-            // $('#loading').hide();
+            }
+    
             $( "#page_content" ).fadeIn( "fast", function() {
                 var panzoom = $(".panzoom-elements").panzoom({
                     cursor: "move",
@@ -108,7 +102,6 @@ function renderSVGMap(){
                     $zoomOut: $('.zoom-out'),
                     $zoomRange: $('.zoom-range'),
                     startTransform: startingMapTransform
-        
                 });
                 $(".panzoom-elements").panzoom("pan", startingPanX, startingPanY, { relative: true });
                 
@@ -120,7 +113,7 @@ function renderSVGMap(){
                   didPanZoom = false;
                 });
             });
-        }else{
+        } else {
             $('#loading').hide();
             $('#zControls').hide();
             $('#map').hide();
@@ -128,18 +121,17 @@ function renderSVGMap(){
         }
     }
 
-function goToStore(store_details){
-    if(typeof(store_details) != 'undefined' && store_details != null){
-        window.location.href = "/stores/"+store_details.slug;
+    function goToStore(store_details){
+        if(typeof(store_details) != 'undefined' && store_details != null){
+            window.location.href = "/stores/"+store_details.slug;
+        }
     }
-}
 
-function getSVGMapURL(){
-    initData();
-    var mallDataJSON = JSON.parse(sessionStorage.mallData);
-    return 'http://cdn.mallmaverick.com' + mallDataJSON.property.svgmap_url;
-}
-
+    function getSVGMapURL(){
+        initData();
+        var mallDataJSON = JSON.parse(sessionStorage.mallData);
+        return 'http://cdn.mallmaverick.com' + mallDataJSON.property.svgmap_url;
+    }
 
     function render_categories(categories){
         $.each( categories , function( key, val ) {
@@ -174,56 +166,49 @@ function getSVGMapURL(){
     };
 
 
-function render_category_stores(){
-    
-    var category_stores = [];
-    var item_rendered = [];
-    var all_stores = getStoresList();
-    var all_categories = getStoreCategories();
-    var test = []
-    var template_html = $("#category_store_list_template").html();
-    Mustache.parse(template_html);
-    for (i = 0; i < all_categories.length; i++) {
-        var stores_per_cat = [];
-        for (j = 0; j < all_stores.length; j++) {
-            if($.inArray(parseInt(all_categories[i].id), all_stores[j].categories) > -1){
-                all_stores[j].cat_name = all_categories[i].name;
-                category_stores.push(all_stores[j]);
-                stores_per_cat.push(all_stores[j]);
+    function render_category_stores(){
+        var category_stores = [];
+        var item_rendered = [];
+        var all_stores = getStoresList();
+        var all_categories = getStoreCategories();
+        var test = []
+        var template_html = $("#category_store_list_template").html();
+        Mustache.parse(template_html);
+        for (i = 0; i < all_categories.length; i++) {
+            var stores_per_cat = [];
+            for (j = 0; j < all_stores.length; j++) {
+                if($.inArray(parseInt(all_categories[i].id), all_stores[j].categories) > -1){
+                    all_stores[j].cat_name = all_categories[i].name;
+                    category_stores.push(all_stores[j]);
+                    stores_per_cat.push(all_stores[j]);
+                }
             }
-        
+            var rendered = Mustache.render(template_html,all_categories[i]);
+            item_rendered.push(rendered);
         }
-        var rendered = Mustache.render(template_html,all_categories[i]);
-        item_rendered.push(rendered);
-    }
-    $("#store_category_list_container").show();
-    $("#store_category_list_container").html(item_rendered.join(''));
-    for (i = 0; i < all_categories.length; i++) {
-        var stores_per_cat = [];
-        for (j = 0; j < all_stores.length; j++) {
-            if($.inArray(parseInt(all_categories[i].id), all_stores[j].categories) > -1){
-                all_stores[j].cat_name = all_categories[i].name;
-                all_stores[j].alt_store_front_url = getImageURL(all_stores[j].store_front_url);    
-                populate_stores_for_cat(all_categories[i].id, all_stores[j]);
+        $("#store_category_list_container").show();
+        $("#store_category_list_container").html(item_rendered.join(''));
+        for (i = 0; i < all_categories.length; i++) {
+            var stores_per_cat = [];
+            for (j = 0; j < all_stores.length; j++) {
+                if($.inArray(parseInt(all_categories[i].id), all_stores[j].categories) > -1){
+                    all_stores[j].cat_name = all_categories[i].name;
+                    all_stores[j].alt_store_front_url = getImageURL(all_stores[j].store_front_url);    
+                    populate_stores_for_cat(all_categories[i].id, all_stores[j]);
+                }
             }
-        
         }
-    }
+    };
+
+    function populate_stores_for_cat (categoryid, store){
+        // console.log (categoryid);
+        // console.log(store);
+        $('#cat'+ categoryid).append('<section class="service_teasers" id="store_for_'+store.id+'"><div class="service_teaser"><div class="row"><div class="service_photo col-sm-4 col-md-4"><a href="../stores/'+store.slug+'"> <figure style="background-image:url('+store.alt_store_front_url+')"></figure></a></div><div class="service_details col-sm-8 col-md-8"><h2 class="section_header skincolored"><b><a href="../stores/'+store.slug+'">'+store.name+'</a></b></h2><p>'+store.description+'</p><span><p class="pull-left"><i class="fa fa-phone"></i><a href="tel:'+store.phone+'">  '+store.phone+'</a></p><a href="../stores/'+store.slug+'" class="btn btn-primary pull-right">view detail</a></div></div></div></div></section>');    }
     
-};
-
-function populate_stores_for_cat (categoryid, store){
-    // console.log (categoryid);
-    // console.log(store);
-    $('#cat'+ categoryid).append('<section class="service_teasers" id="store_for_'+store.id+'"><div class="service_teaser"><div class="row"><div class="service_photo col-sm-4 col-md-4"><a href="../stores/'+store.slug+'"> <figure style="background-image:url('+store.alt_store_front_url+')"></figure></a></div><div class="service_details col-sm-8 col-md-8"><h2 class="section_header skincolored"><b><a href="../stores/'+store.slug+'">'+store.name+'</a></b></h2><p>'+store.description+'</p><span><p class="pull-left"><i class="fa fa-phone"></i><a href="tel:'+store.phone+'">  '+store.phone+'</a></p><a href="../stores/'+store.slug+'" class="btn btn-primary pull-right">view detail</a></div></div></div></div></section>');    }
-
-    loadMallData(renderAll);  
-
-
-});
+        loadMallData(renderAll);  
+    });
 
 function show_cat(link, type){
-
     if (type == "all"){
         $("#store_list_container").show();
         $(".cat_list_div").hide();    
@@ -232,8 +217,6 @@ function show_cat(link, type){
         $(".cat_list_div").hide();
         $("#"+link.id).show();    
     }
-
-    
 }
 
 
