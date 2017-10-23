@@ -20,22 +20,23 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-@font-face{
+@font-face {
     font-family: gotham;
-    src: url(http://assets.codecloudapp.com/sites/55887c646e6f642257020000//1386798312000/GothamBook.ttf)
+    src: url('//codecloud.cdn.speedyrails.net/sites/55887c646e6f642257020000//1386798312000/GothamBook.ttf')
 }
 @font-face{
     font-family: gotham;
-    src: url(http://assets.codecloudapp.com/sites/55887c646e6f642257020000//1386798350000/GothamBold.ttf);
+    src: url('//codecloud.cdn.speedyrails.net/sites/55887c646e6f642257020000//1386798350000/GothamBold.ttf');
     font-weight:bold;
 }
 @font-face{
     font-family: gotham;
-    src: url(http://assets.codecloudapp.com/sites/55887c646e6f642257020000//1386798364000/GothamMedium.ttf);
+    src: url('//codecloud.cdn.speedyrails.net/sites/55887c646e6f642257020000//1386798364000/GothamMedium.ttf');
     font-weight:500;
 }
+
 @media only screen and (min-width: 768px) {
-  /* Add your Desktop Styles here */
+    /* Add your Desktop Styles here */
 	.desktop-only img{
 		display: block !important;
 	}
@@ -43,8 +44,9 @@ html {
 		display: none !important;
 	}
 }
+
 @media only screen and (max-width: 768px) {
-  /* Add your Mobile Styles here */
+    /* Add your Mobile Styles here */
 	.desktop-only img{
 		display: none !important;
 	}
@@ -52,7 +54,6 @@ html {
 		display: block !important;
 		width:100%;
 	}
-	
 	#search_wrapper{
 	    display:none;
 	}
@@ -72,7 +73,7 @@ html {
 }
 
 body {
-  margin: 0;
+    margin: 0;
 }
 article,
 aside,
@@ -86,22 +87,22 @@ main,
 nav,
 section,
 summary {
-  display: block;
+    display: block;
 }
 audio,
 canvas,
 progress,
 video {
-  display: inline-block;
-  vertical-align: baseline;
+    display: inline-block;
+    vertical-align: baseline;
 }
 audio:not([controls]) {
-  display: none;
-  height: 0;
+    display: none;
+    height: 0;
 }
 [hidden],
 template {
-  display: none;
+    display: none;
 }
 a {
   background: transparent;
