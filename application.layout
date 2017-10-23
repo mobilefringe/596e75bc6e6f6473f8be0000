@@ -171,12 +171,11 @@
         }
     }
     @media (max-width: 767px) {
-    {
-.footer-text {
-    text-align: center;
-    padding-left: 33px !important;
-}
-}
+        .footer-text {
+            text-align: center;
+            padding-left: 33px !important;
+        }
+    }
     .main_window{
         border:40px solid #bfbfbf;
     }
@@ -187,44 +186,39 @@
         color:white !important;
     }
     .btn-primary:hover {
-  background: #299E48 !important;
-  border-color: #299E48 !important;
-  text-align: center;
- color: #ffffff !important;
-}
+        background: #299E48 !important;
+        border-color: #299E48 !important;
+        text-align: center;
+        color: #ffffff !important;
+    }
     .btn-danger {
-    color: #FFF;
-    background-color: #299E48;
-    border-color: #299E48;
-}
-   .portfolio_item figure {
-  height: 300px !important;
- 
-}
-.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
-  color: #ffffff !important;
-  background-color: #299E48;
-  border-color: #299E48;
-}
+        color: #FFF;
+        background-color: #299E48;
+        border-color: #299E48;
+    }
+    .portfolio_item figure {
+        height: 300px !important;
+    }
+    .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
+        color: #ffffff !important;
+        background-color: #299E48;
+        border-color: #299E48;
+    }
     .btn-primary:hover{
         background: #299E48 !important;
         border-color:#299E48 !important;
         text-align:center;
     }
-    
     /*menu colors*/
     .navbar .nav li a{
-        color:black;
+        color: black;
     }
-    
     .view_button {
         background:black !important;
     }
-    
     .navbar .nav li a:hover,.navbar .nav li a:active{
         color:black !important;
     }
-    
     .site_welcome_msg{
         font-size:22px !important;
         margin-top:0 !important;
@@ -276,7 +270,7 @@
         box-shadow: 0px 0px 30px lightgray inset;
     }
     .section_header{}
-    .promo_header{
+    .promo_header {
         border-bottom:solid 1px #cccccc;
         padding-bottom:10px;
     }
