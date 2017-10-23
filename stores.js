@@ -146,6 +146,7 @@ function render_categories(categories){
         $("#categories_container").append('<a href="#" data-id="'+ val.id + '" class="btn btn-primary show_cat_stores">'+val.name+'</a>');
     });
 };
+
 function renderPageData(container, template, collection, type){
     var item_list = [];
     var item_rendered = [];
@@ -154,7 +155,7 @@ function renderPageData(container, template, collection, type){
     $.each( collection , function( key, val ) {
         if (type == "stores" || type == "category_stores"){
             if(!val.store_front_url ||  val.store_front_url.indexOf('missing.png') > -1 || val.store_front_url.length === 0){
-                    val.alt_store_front_url = "http://kodekloud.s3.amazonaws.com/sites/54cfabe36e6f641f2e010000/e3caeac24db5ab4cc9a8679e6db6392d/VV_default.jpg"    
+                    val.alt_store_front_url = "//kodekloud.s3.amazonaws.com/sites/54cfabe36e6f641f2e010000/e3caeac24db5ab4cc9a8679e6db6392d/VV_default.jpg"    
             } else {
                 val.alt_store_front_url = getImageURL(val.store_front_url);    
             }
@@ -162,11 +163,10 @@ function renderPageData(container, template, collection, type){
         if(val.categories != null){
             val.cat_list = val.categories.join(',')
         }
+        
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
-
     });
-    
     $(container).show();
     $(container).html(item_rendered.join(''));
 };
