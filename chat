@@ -11,12 +11,13 @@
     <script type="text/javascript">
         var accessToken = '6815bff4f00341e0a5f0b6e2459340c7';  //Replace access token here
         var baseUrl = "http://mallmaverickdevelopment.com/";
+        var propertyId = 49  //Set the property ID
         
         $(document).ready(function() {
             // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
             axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                 message: "welcome",
-                property_id: 49 //Set the property ID
+                property_id: propertyId
             })
             .then(function (response) {
                 setTimeout(function() {
@@ -38,9 +39,9 @@
                 }
             });
             
-            $(".close_chatbot").click(function() {
-                $("#chat_modal").remove();    
-            });
+            // $(".close_chatbot").click(function() {
+            //     $("#chat_modal").remove();    
+            // });
         });
         
         function prompt(){
@@ -57,7 +58,7 @@
                 
                 axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                     message: "store name",
-                    property_id: 49 //Set the property ID
+                    property_id: propertyId
                 })
                 .then(function (response) {
                     setTimeout(function() {
@@ -74,7 +75,7 @@
                 
                 axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                     message: "hours",
-                    property_id: 49 //Set the property ID
+                    property_id: propertyId
                 })
                 .then(function (response) {
                     setTimeout(function() {
@@ -91,7 +92,7 @@
                 
                 axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                     message: "location",
-                    property_id: 49 //Set the property ID
+                    property_id: propertyId
                 })
                 .then(function (response) {
                     setTimeout(function() {
@@ -108,7 +109,7 @@
                 
                 axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                     message: "contact",
-                    property_id: 49 //Set the property ID
+                    property_id: propertyId //Set the property ID
                 })
                 .then(function (response) {
                     setTimeout(function() {
@@ -125,7 +126,7 @@
             
             axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
                 message: text,
-                property_id: 49 //Set the property ID
+                property_id: propertyId
             })
             .then(function (response) {
 
