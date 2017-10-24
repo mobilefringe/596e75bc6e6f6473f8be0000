@@ -74,7 +74,7 @@
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
                 axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
-                    message: "hours",
+                    message: "today's hours",
                     property_id: propertyId
                 })
                 .then(function (response) {
