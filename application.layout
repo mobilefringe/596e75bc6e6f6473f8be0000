@@ -700,7 +700,7 @@
         $(".close_chatbot").click(function() {
             $("#chat_modal").remove();    
             $(".modal-backdrop").remove();
-            $("body").removeClass("modal-open");
+            $("body").toggleClass("modal-open");
         }); 
     });
 </script>
