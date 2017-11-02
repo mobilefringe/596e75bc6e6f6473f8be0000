@@ -16,7 +16,7 @@
         $(document).ready(function() {
             // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
             // axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
-            axios.post('https://localhost:9000/chatbot_endpoint', {
+            axios.post('http://localhost:9000/chatbot_endpoint', {
                 message: "welcome",
                 property_id: propertyId
             })
