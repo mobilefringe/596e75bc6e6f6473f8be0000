@@ -57,7 +57,7 @@
                 var objDiv = document.getElementById("bot");
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
-                axios.post('//localhost:9000/api/chatbot_endpoint', {
+                axios.post( baseUrl, {
                     message: "store name",
                     property_id: propertyId
                 })
@@ -74,7 +74,7 @@
                 var objDiv = document.getElementById("bot");
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
-                axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
+                axios.post( baseUrl, {
                     message: "today's hours",
                     property_id: propertyId
                 })
@@ -91,7 +91,7 @@
                 var objDiv = document.getElementById("bot");
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
-                axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
+                axios.post( baseUrl, {
                     message: "where are you located",
                     property_id: propertyId
                 })
@@ -108,7 +108,7 @@
                 var objDiv = document.getElementById("bot");
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
-                axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
+                axios.post( baseUrl, {
                     message: "guest services",
                     property_id: propertyId //Set the property ID
                 })
@@ -125,7 +125,7 @@
             var d = document.getElementById('bot').innerHTML;
             document.getElementById('bot').innerHTML = d.replace(' animated flipInX', '') + "<div class='calloutbig'><div class='calloutleft'>" + text + "</div><div class='message-from message-from-me'>" + moment().format('MMMM D, YYYY | h:mmA'); + "</div></div>";
             
-            axios.post('https://mallmaverickstaging.com/api/chatbot_endpoint', {
+            axios.post( baseUrl, {
                 message: text,
                 property_id: propertyId
             })
