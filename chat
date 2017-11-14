@@ -12,7 +12,7 @@
         var accessToken = '6815bff4f00341e0a5f0b6e2459340c7';  //Replace access token here
         // var baseUrl = "https://mallmaverickstaging.com/api/chatbot_endpoint";
         var baseUrl = "//localhost:9000/api/chatbot_endpoint";
-        var propertyId = 55  //Set the property ID
+        var propertyId = 49  //Set the property ID
         
         $(document).ready(function() {
             // Send "welcome" message upon opening Chatbot so the custom welcome message will be displayed.
