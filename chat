@@ -24,10 +24,10 @@
                 setTimeout(function() {
                     setResponse(JSON.stringify(response, undefined, 2));
                 }, 1500);
-                setTimeout(function() {
-                    prompt();
-                    promptButtons();
-                }, 2500);
+                // setTimeout(function() {
+                //     prompt();
+                //     promptButtons();
+                // }, 2500);
             })
             .catch(function (error) {
                 console.log(error);
