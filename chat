@@ -23,8 +23,7 @@
             .then(function (response) {
                 setTimeout(function() {
                     setResponse(JSON.stringify(response, undefined, 2));
-                // }, 1500);
-                }, 1000);
+                }, 1500);
                 // setTimeout(function() {
                 //     prompt();
                 //     promptButtons();
