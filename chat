@@ -92,7 +92,7 @@
                 objDiv.scrollTop = objDiv.scrollHeight;
                 
                 axios.post( baseUrl, {
-                    message: "where are you located",
+                    message: "address",
                     property_id: propertyId
                 })
                 .then(function (response) {
