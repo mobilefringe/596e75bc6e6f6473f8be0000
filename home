@@ -87,7 +87,7 @@
                     <a href="{{url}}" {{css}} onclick="{{noLink}}">
                         <img src="{{image_url}}"/>
                     </a>
-                    {{cms_fields.homebanner}}
+                    <p>{{cms_fields.homebanner}}</p>
                 </li>
             </script>
         </ul>
