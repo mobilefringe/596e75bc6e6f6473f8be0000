@@ -87,7 +87,6 @@
                     <a href="{{url}}" {{css}} onclick="{{noLink}}">
                         <img src="{{image_url}}"/>
                     </a>
-                    <p>{{cms_fields.homebanner}}</p>
                 </li>
             </script>
         </ul>
@@ -201,7 +200,7 @@
             var propertyDetails = getPropertyDetails();
             var promotions = getPromotionsList();
             promotions = promotions.slice(0,3);
-            var banners = getBanners();
+            var banners = getBanners()
             var hours = getTodaysHours()
             renderTemplate('#promo_items','#promo_template',promotions);
             renderLayoutHours('#todays_hours_container', '#todays_hours_template', hours);
