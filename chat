@@ -11,7 +11,7 @@
     <script type="text/javascript">
         var accessToken = '6815bff4f00341e0a5f0b6e2459340c7';  //Replace access token here
         // var baseUrl = "https://mallmaverickstaging.com/api/chatbot_endpoint";
-        var baseUrl = "//localhost:9000/api/chatbot_endpoint";
+        var baseUrl = "//localhost:3000/api/chatbot_endpoint";
         var propertyId = 49  //Set the property ID
         
         $(document).ready(function() {
