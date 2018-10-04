@@ -91,6 +91,47 @@
         ga('create', 'UA CODE IN HERE', 'auto');
         ga('send', 'pageview');
     </script>
+    
+    <script>
+        // Initialize the Facebook JS SDK.
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId            : '1987015024884837',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v3.1'
+            });
+            ogShare(FB);
+        };
+        
+        // Load the Facebook JS SDK Asynchronously
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        
+        
+
+        function ogShare(FB) {
+            var currentPage = window.location.href;
+            console.log(currentPage)
+            FB.ui(
+                {
+                    method: 'share_open_graph',
+                    action_type: 'og.likes',
+                    action_properties: JSON.stringify({
+                        object: currentPage,
+                    })
+                }, function(response){
+                    // Debug response (optional)
+                    console.log(response);
+                }
+            );
+        }
+    </script>
 </head>
 <style>
     /*custom styles*/
