@@ -3,11 +3,6 @@
 <head>
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,300italic" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
-    <meta property="og:title" content="{{meta_title}}">
-    <meta property="og:description" content="{{meta_description}}">
-    <meta property="og:image" content="{{meta_image}}">
-    <meta property="og:image:width" content="600" />
-    <meta property="og:image:height" content="315" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Twin Pines Mall</title>
@@ -95,47 +90,6 @@
         
         ga('create', 'UA CODE IN HERE', 'auto');
         ga('send', 'pageview');
-    </script>
-    
-    <script>
-        // Initialize the Facebook JS SDK.
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId            : '1987015024884837',
-                autoLogAppEvents : true,
-                xfbml            : true,
-                version          : 'v3.1'
-            });
-            ogShare(FB);
-        };
-        
-        // Load the Facebook JS SDK Asynchronously
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        
-        
-
-        function ogShare(FB) {
-            var currentPage = window.location.href;
-            console.log(currentPage)
-            FB.ui(
-                {
-                    method: 'share_open_graph',
-                    action_type: 'og.likes',
-                    action_properties: JSON.stringify({
-                        object: currentPage,
-                    })
-                }, function(response){
-                    // Debug response (optional)
-                    console.log(response);
-                }
-            );
-        }
     </script>
 </head>
 <style>
